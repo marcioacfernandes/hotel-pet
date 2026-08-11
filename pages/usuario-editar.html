@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Edição de perfil do Hotel Pet.">
+<title>Hotel Pet | Editar perfil</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="menu-lateral">
+<a class="logo" href="usuarios.html">Hotel Pet</a>
+<nav class="menu-principal" aria-label="Menu principal">
+<a class="menu-item" href="pets.html"><span class="icone">♧</span><span
+<a class="menu-item ativo" href="usuarios.html"><span class="icone">♙</
+<a class="menu-item" href="configuracoes.html"><span class="icone">⚙</s
+<a class="menu-item" href="reservas.html"><span class="icone">▣</span><
+</nav>
+</aside>
+<div class="area-sistema">
+<header class="barra-superior">
+<span></span>
+<div class="usuario-logado">
+<img src="../images/avatar.svg" alt="Avatar de João da Silva">
+<span>João da Silva</span>
+</div>
+</header>
+<main class="conteudo">
+<nav class="breadcrumb" aria-label="Caminho da página">
+<a href="usuarios.html">Home</a>
+<span>/</span>
+<a href="usuarios.html">Usuário</a>
+<span>/</span>
+<span aria-current="page">Editar perfil</span>
+</nav>
+<section class="painel formulario-painel" aria-labelledby="titulo-formu
+<h1 id="titulo-formulario">Editar Perfil</h1>
+<form class="formulario-usuario" action="usuarios.html" method="get">
+<div class="campo">
+<label for="email-usuario">Email *</label>
+<input type="email" id="email-usuario" name="email" value="joaodas
+</div>
+<div class="campo">
+<label for="nome-usuario">Nome *</label>
+<input type="text" id="nome-usuario" name="nome" value="João" req
+</div>
+<div class="campo">
+<label for="sobrenome-usuario">Sobrenome</label>
+<input type="text" id="sobrenome-usuario" name="sobrenome" value=
+</div>
+<div class="campo">
+<label for="telefone-usuario">Telefone *</label>
+<input type="tel" id="telefone-usuario" name="telefone" value="+55
+</div>
+<div class="campo">
+<label for="funcao-usuario">Função</label>
+<select id="funcao-usuario" name="funcao">
+<option value="cliente">Cliente</option>
+<option value="funcionario">Funcionário</option>
+<option value="gerente" selected>Gerente</option>
+</select>
+</div>
+<div class="campo">
+<label for="foto-usuario">Foto</label>
+<input type="file" id="foto-usuario" name="foto" accept="image/*">
+</div>
+<div class="acoes-formulario">
+<button class="botao botao-primario" type="submit">▣ Salvar</but
+<button class="botao botao-outline" type="reset">↻ Limpar</button
+</div>
+</form>
+</section>
+</main>
+</div>
+</div>
+</body>
+</html>
