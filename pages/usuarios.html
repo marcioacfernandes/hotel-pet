@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lista de usuários do Hotel Pet.">
+<title>Hotel Pet | Usuários</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="menu-lateral">
+<a class="logo" href="usuarios.html">Hotel Pet</a>
+<nav class="menu-principal" aria-label="Menu principal">
+<a class="menu-item" href="pets.html">
+<span class="icone">♧</span>
+<span>Pet</span>
+</a>
+<a class="menu-item ativo" href="usuarios.html" aria-current="page">
+<span class="icone">♙</span>
+<span>Usuários</span>
+</a>
+<a class="menu-item" href="configuracoes.html">
+<span class="icone">⚙</span>
+<span>Configurações</span>
+</a>
+<a class="menu-item" href="reservas.html">
+<span class="icone">▣</span>
+<span>Reservas</span>
+</a>
+</nav>
+</aside>
+<div class="area-sistema">
+<header class="barra-superior">
+<span></span>
+<div class="usuario-logado">
+<img src="../images/avatar.svg" alt="Avatar de João da Silva">
+<span>João da Silva</span>
+</div>
+</header>
+<main class="conteudo">
+<nav class="breadcrumb" aria-label="Caminho da página">
+<a href="usuarios.html">Home</a>
+<span>/</span>
+<span aria-current="page">Usuários</span>
+</nav>
+<section class="painel" aria-labelledby="titulo-usuarios">
+<h1 id="titulo-usuarios">Usuários</h1>
+<div class="acoes-pagina">
+<a class="botao botao-outline" href="usuario-novo.html">♙+ Novo</a>
+<button class="botao botao-outline" type="button">♙− Remover</butto
+<button class="botao botao-outline" type="button">✓ Mudar status</b
+</div>
+<div class="visualizacao">
+<span>Visualizar por:</span>
+<a class="seletor-visual ativo-roxo" href="usuarios.html">Usuários</
+<a class="seletor-visual" href="usuarios.html">Função</a>
+</div>
+<form class="filtros-usuarios" action="usuarios.html" method="get">
+<div class="campo">
+<label for="id">Id</label>
+<input type="text" id="id" name="id">
+</div>
+<div class="campo">
+<label for="criado-inicio">Criado em</label>
+<div class="intervalo-data">
+<input type="date" id="criado-inicio" name="criado-inicio">
+<input type="date" id="criado-fim" name="criado-fim" aria-label=
+</div>
+</div>
+<div class="campo">
+<label for="email">Email</label>
+<input type="email" id="email" name="email">
+</div>
+<div class="campo">
+<label for="nome">Nome</label>
+<input type="text" id="nome" name="nome">
+</div>
+<div class="campo">
+<label for="status">Status</label>
+<select id="status" name="status">
+<option value="">Todos</option>
+<option value="ativo">Ativo</option>
+<option value="inativo">Inativo</option>
+</select>
+</div>
+<div class="campo">
+<label for="funcao">Função</label>
+<select id="funcao" name="funcao">
+<option value="">Todas</option>
+<option value="cliente">Cliente</option>
+<option value="funcionario">Funcionário</option>
+<option value="gerente">Gerente</option>
+</select>
+</div>
+<div class="acoes-filtro">
+<button class="botao botao-primario" type="submit">⌕ Pesquisar</bu
+<a class="botao botao-outline" href="usuarios.html">↻ Limpar</a>
+</div>
+</form>
+<div class="tabela-container">
+<table class="tabela-usuarios">
+<thead>
+<tr>
+<th scope="col">Foto</th>
+<th scope="col">email ↓</th>
+<th scope="col">nome ↓</th>
+<th scope="col">função ↓</th>
+<th scope="col">status ↓</th>
+<th scope="col">criado em ↓</th>
+<th scope="col">Ações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img class="avatar-tabela" src="../images/avatar.svg" alt=
+<td>joaodasilva@pet.com</td>
+<td>João da Silva</td>
+<td>Gerente</td>
+<td><span class="status status-ativo">Ativo</span></td>
+<td>19/02/2020</td>
+<td class="acoes-tabela">
+<a href="usuario-editar.html">Editar</a>
+<a href="usuario-visualizar.html">Visualizar</a>
+</td>
+</tr>
+<tr>
+<td><img class="avatar-tabela" src="../images/avatar.svg" alt=
+<td>maria@pet.com</td>
+<td>Maria da Silva</td>
+<td>Funcionário</td>
+<td><span class="status status-inativo">Inativo</span></td>
+<td>19/02/2020</td>
+<td class="acoes-tabela">
+<a href="usuario-editar.html">Editar</a>
+<a href="usuario-visualizar.html">Visualizar</a>
+</td>
+</tr>
+<tr>
+<td><img class="avatar-tabela" src="../images/avatar.svg" alt=
+<td>josedasilva@pet.com</td>
+<td>José da Silva</td>
+<td>Cliente</td>
+<td><span class="status status-ativo">Ativo</span></td>
+<td>19/02/2020</td>
+<td class="acoes-tabela">
+<a href="usuario-editar.html">Editar</a>
+<a href="usuario-visualizar.html">Visualizar</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+</div>
+</div>
+</body>
+</html>
