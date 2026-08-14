@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Editar reserva — sistema Hotel Pet.">
+  <title>Hotel Pet | Editar reserva</title>
+</head>
+<body>
+  <header>
+    <h1>Hotel Pet</h1>
+    <p><strong>Perfil ativo:</strong> Gerente — João da Silva</p>
+
+    <nav aria-label="Menu principal">
+      <a href="reservas.html" aria-current="page">Reservas</a>
+          <a href="pets.html">Pets</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="configuracoes.html">Configurações</a>
+          <a href="perfil.html">Meu perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <nav aria-label="Caminho da página">
+      <p>Home / Reservas / Editar reserva</p>
+    </nav>
+
+    <section aria-labelledby="titulo-editar-reserva">
+  <h2 id="titulo-editar-reserva">Editar reserva</h2>
+  <p>Esta tela representa a permissão exclusiva do gerente para alterar também reservas finalizadas.</p>
+
+  <form action="reservas.html" method="get">
+    <fieldset>
+      <legend>Informações principais</legend>
+
+      <p>
+        <label for="codigo-reserva">Código</label><br>
+        <input type="text" id="codigo-reserva" name="codigo" value="R002" readonly>
+      </p>
+
+      <p>
+        <label for="pet-editar-reserva">Pet</label><br>
+        <select id="pet-editar-reserva" name="pet">
+          <option selected>Thor — Cachorro</option>
+          <option>Mel — Cachorro</option>
+          <option>Luna — Gato</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="entrada-editar">Data de entrada</label><br>
+        <input type="date" id="entrada-editar" name="entrada" value="2026-08-01">
+      </p>
+
+      <p>
+        <label for="saida-editar">Data de saída</label><br>
+        <input type="date" id="saida-editar" name="saida" value="2026-08-05">
+      </p>
+
+      <p>
+        <label for="status-reserva">Status</label><br>
+        <select id="status-reserva" name="status">
+          <option>Confirmada</option>
+          <option>Em andamento</option>
+          <option selected>Finalizada</option>
+        </select>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Registros da estadia</legend>
+
+      <p>
+        <label for="anotacoes">Anotações do funcionário/gerente</label><br>
+        <textarea id="anotacoes" name="anotacoes" rows="5" cols="50">Thor apresentou bom comportamento e realizou os passeios normalmente.</textarea>
+      </p>
+
+      <p>
+        <label for="imagens-estadia">Adicionar imagens da estadia</label><br>
+        <input type="file" id="imagens-estadia" name="imagens-estadia" accept="image/*" multiple>
+      </p>
+
+      <p>
+        <label for="recibo">Adicionar ou substituir recibo/nota da estadia</label><br>
+        <input type="file" id="recibo" name="recibo" accept=".pdf,image/*">
+      </p>
+    </fieldset>
+
+    <p>
+      <button type="submit">Salvar alterações</button>
+      <button type="reset">Limpar</button>
+      <a href="reservas.html">Cancelar</a>
+    </p>
+  </form>
+</section>
+  </main>
+
+  <footer>
+    <p>Hotel Pet — projeto acadêmico. Primeira entrega: HTML estático.</p>
+  </footer>
+</body>
+</html>

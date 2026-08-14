@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nova reserva — sistema Hotel Pet.">
+  <title>Hotel Pet | Nova reserva</title>
+</head>
+<body>
+  <header>
+    <h1>Hotel Pet</h1>
+    <p><strong>Perfil ativo:</strong> Gerente — João da Silva</p>
+
+    <nav aria-label="Menu principal">
+      <a href="reservas.html" aria-current="page">Reservas</a>
+          <a href="pets.html">Pets</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="configuracoes.html">Configurações</a>
+          <a href="perfil.html">Meu perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <nav aria-label="Caminho da página">
+      <p>Home / Reservas / Nova reserva</p>
+    </nav>
+
+    <section aria-labelledby="titulo-nova-reserva">
+  <h2 id="titulo-nova-reserva">Cadastrar nova reserva</h2>
+
+  <form action="reservas.html" method="get">
+    <fieldset>
+      <legend>Dados da reserva</legend>
+
+      <p>
+        <label for="cliente-reserva">Responsável</label><br>
+        <select id="cliente-reserva" name="cliente" required>
+          <option value="">Selecione</option>
+          <option>Ana Souza</option>
+          <option>Carlos Lima</option>
+          <option>Maria Oliveira</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="pet-reserva">Pet previamente cadastrado</label><br>
+        <select id="pet-reserva" name="pet" required>
+          <option value="">Selecione</option>
+          <option>Mel — Cachorro</option>
+          <option>Thor — Cachorro</option>
+          <option>Luna — Gato</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="entrada">Data de entrada</label><br>
+        <input type="date" id="entrada" name="entrada" required>
+      </p>
+
+      <p>
+        <label for="saida">Data de saída</label><br>
+        <input type="date" id="saida" name="saida" required>
+      </p>
+
+      <p>
+        <label for="informacoes-pet">Informações sobre o pet</label><br>
+        <textarea id="informacoes-pet" name="informacoes-pet" rows="5" cols="50" placeholder="Alimentação, medicação, comportamento e cuidados especiais."></textarea>
+      </p>
+
+      <p>
+        <label for="valor-total">Valor total das diárias</label><br>
+        <output id="valor-total">R$ 320,00 — valor demonstrativo; o cálculo automático dependerá de programação na etapa futura.</output>
+      </p>
+
+      <p>
+        <button type="submit">Salvar reserva</button>
+        <button type="reset">Limpar</button>
+        <a href="reservas.html">Cancelar</a>
+      </p>
+    </fieldset>
+  </form>
+</section>
+  </main>
+
+  <footer>
+    <p>Hotel Pet — projeto acadêmico. Primeira entrega: HTML estático.</p>
+  </footer>
+</body>
+</html>

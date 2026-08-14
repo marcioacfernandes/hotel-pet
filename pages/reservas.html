@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reservas — sistema Hotel Pet.">
+  <title>Hotel Pet | Reservas</title>
+</head>
+<body>
+  <header>
+    <h1>Hotel Pet</h1>
+    <p><strong>Perfil ativo:</strong> Gerente — João da Silva</p>
+
+    <nav aria-label="Menu principal">
+      <a href="reservas.html" aria-current="page">Reservas</a>
+          <a href="pets.html">Pets</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="configuracoes.html">Configurações</a>
+          <a href="perfil.html">Meu perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <nav aria-label="Caminho da página">
+      <p>Home / Reservas</p>
+    </nav>
+
+    <section aria-labelledby="titulo-reservas">
+  <h2 id="titulo-reservas">Reservas</h2>
+  <p>Como gerente, você visualiza, cria e edita reservas em andamento e finalizadas.</p>
+
+  <p><a href="reserva-nova.html">Cadastrar nova reserva</a></p>
+
+  <form action="reservas.html" method="get">
+    <fieldset>
+      <legend>Pesquisar reservas</legend>
+
+      <p>
+        <label for="busca-pet">Nome do pet</label><br>
+        <input type="search" id="busca-pet" name="pet">
+      </p>
+
+      <p>
+        <label for="busca-cliente">Responsável</label><br>
+        <input type="search" id="busca-cliente" name="cliente">
+      </p>
+
+      <p>
+        <label for="busca-status">Status</label><br>
+        <select id="busca-status" name="status">
+          <option value="">Todos</option>
+          <option value="andamento">Em andamento</option>
+          <option value="confirmada">Confirmada</option>
+          <option value="finalizada">Finalizada</option>
+        </select>
+      </p>
+
+      <p><button type="submit">Pesquisar</button> <a href="reservas.html">Limpar</a></p>
+    </fieldset>
+  </form>
+
+  <table>
+    <caption>Reservas cadastradas</caption>
+    <thead>
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Pet</th>
+        <th scope="col">Responsável</th>
+        <th scope="col">Período</th>
+        <th scope="col">Valor total</th>
+        <th scope="col">Status</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>R001</td>
+        <td>Mel</td>
+        <td>Ana Souza</td>
+        <td>14/08/2026 a 18/08/2026</td>
+        <td>R$ 320,00</td>
+        <td>Em andamento</td>
+        <td><a href="reserva-editar.html">Editar</a> | <a href="reserva-visualizar.html">Visualizar</a></td>
+      </tr>
+      <tr>
+        <td>R002</td>
+        <td>Thor</td>
+        <td>Carlos Lima</td>
+        <td>01/08/2026 a 05/08/2026</td>
+        <td>R$ 280,00</td>
+        <td>Finalizada</td>
+        <td><a href="reserva-editar.html">Editar</a> | <a href="reserva-finalizada.html">Visualizar recibo e histórico</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><small>Na versão do gerente, inclusive uma reserva finalizada pode ser editada. Os filtros e as alterações são apenas visuais nesta entrega.</small></p>
+</section>
+  </main>
+
+  <footer>
+    <p>Hotel Pet — projeto acadêmico. Primeira entrega: HTML estático.</p>
+  </footer>
+</body>
+</html>
