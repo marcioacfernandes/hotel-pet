@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pets — sistema Hotel Pet.">
+  <title>Hotel Pet | Pets</title>
+</head>
+<body>
+  <header>
+    <h1>Hotel Pet</h1>
+    <p><strong>Perfil ativo:</strong> Gerente — João da Silva</p>
+
+    <nav aria-label="Menu principal">
+      <a href="reservas.html">Reservas</a>
+          <a href="pets.html" aria-current="page">Pets</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="configuracoes.html">Configurações</a>
+          <a href="perfil.html">Meu perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <nav aria-label="Caminho da página">
+      <p>Home / Pets</p>
+    </nav>
+
+    <section aria-labelledby="titulo-pets">
+  <h2 id="titulo-pets">Pets</h2>
+  <p><a href="pet-novo.html">Cadastrar novo pet</a></p>
+
+  <form action="pets.html" method="get">
+    <fieldset>
+      <legend>Pesquisar pets</legend>
+
+      <p>
+        <label for="nome-pet">Nome</label><br>
+        <input type="search" id="nome-pet" name="nome">
+      </p>
+
+      <p>
+        <label for="tipo-pet">Tipo de animal</label><br>
+        <select id="tipo-pet" name="tipo">
+          <option value="">Todos</option>
+          <option>Cachorro</option>
+          <option>Gato</option>
+          <option>Outro</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="raca-pet">Raça</label><br>
+        <input type="search" id="raca-pet" name="raca">
+      </p>
+
+      <p>
+        <label for="tamanho-pet">Tamanho</label><br>
+        <select id="tamanho-pet" name="tamanho">
+          <option value="">Todos</option>
+          <option>Pequeno</option>
+          <option>Médio</option>
+          <option>Grande</option>
+        </select>
+      </p>
+
+      <p><button type="submit">Pesquisar</button> <a href="pets.html">Limpar</a></p>
+    </fieldset>
+  </form>
+
+  <table>
+    <caption>Pets cadastrados</caption>
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Raça</th>
+        <th scope="col">Tamanho</th>
+        <th scope="col">Proprietário</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mel</td>
+        <td>Cachorro</td>
+        <td>Golden Retriever</td>
+        <td>Grande</td>
+        <td>Ana Souza</td>
+        <td><a href="pet-editar.html">Editar</a> | <a href="pet-visualizar.html">Visualizar</a></td>
+      </tr>
+      <tr>
+        <td>Luna</td>
+        <td>Gato</td>
+        <td>Siamês</td>
+        <td>Pequeno</td>
+        <td>Maria Oliveira</td>
+        <td><a href="pet-editar.html">Editar</a> | <a href="pet-visualizar.html">Visualizar</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+  </main>
+
+  <footer>
+    <p>Hotel Pet — projeto acadêmico. Primeira entrega: HTML estático.</p>
+  </footer>
+</body>
+</html>

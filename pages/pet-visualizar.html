@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visualizar pet — sistema Hotel Pet.">
+  <title>Hotel Pet | Visualizar pet</title>
+</head>
+<body>
+  <header>
+    <h1>Hotel Pet</h1>
+    <p><strong>Perfil ativo:</strong> Gerente — João da Silva</p>
+
+    <nav aria-label="Menu principal">
+      <a href="reservas.html">Reservas</a>
+          <a href="pets.html" aria-current="page">Pets</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="configuracoes.html">Configurações</a>
+          <a href="perfil.html">Meu perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <nav aria-label="Caminho da página">
+      <p>Home / Pets / Visualizar pet</p>
+    </nav>
+
+    <section aria-labelledby="titulo-visualizar-pet">
+  <h2 id="titulo-visualizar-pet">Visualizar pet</h2>
+
+  <h3>Características</h3>
+  <p><strong>Nome:</strong> Mel</p>
+  <p><strong>Tipo:</strong> Cachorro</p>
+  <p><strong>Raça:</strong> Golden Retriever</p>
+  <p><strong>Tamanho:</strong> Grande</p>
+  <p><strong>Proprietário:</strong> Ana Souza</p>
+  <p><strong>Foto:</strong> arquivo de imagem representado apenas pelo campo de cadastro nesta entrega.</p>
+
+  <h3>Histórico de reservas</h3>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Período</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>R001</td>
+        <td>14/08/2026 a 18/08/2026</td>
+        <td>Em andamento</td>
+      </tr>
+      <tr>
+        <td>R010</td>
+        <td>02/06/2026 a 05/06/2026</td>
+        <td>Finalizada</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    <a href="pet-editar.html">Editar informações</a> |
+    <button type="button">Excluir pet</button> |
+    <a href="pets.html">Voltar para pets</a>
+  </p>
+  <p><small>O botão Excluir pet é apenas visual na primeira entrega; não haverá exclusão real sem programação.</small></p>
+</section>
+  </main>
+
+  <footer>
+    <p>Hotel Pet — projeto acadêmico. Primeira entrega: HTML estático.</p>
+  </footer>
+</body>
+</html>
