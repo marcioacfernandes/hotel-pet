@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meu perfil — sistema Hotel Pet.">
+  <title>Hotel Pet | Meu perfil</title>
+</head>
+<body>
+  <header>
+    <h1>Hotel Pet</h1>
+    <p><strong>Perfil ativo:</strong> Gerente — João da Silva</p>
+
+    <nav aria-label="Menu principal">
+      <a href="reservas.html">Reservas</a>
+          <a href="pets.html">Pets</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="configuracoes.html">Configurações</a>
+          <a href="perfil.html" aria-current="page">Meu perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <nav aria-label="Caminho da página">
+      <p>Home / Meu perfil</p>
+    </nav>
+
+    <section aria-labelledby="titulo-perfil">
+  <h2 id="titulo-perfil">Meu perfil</h2>
+  <p>Esta página pode ser acessada pelo nome do usuário no topo da interface quando o CSS for aplicado.</p>
+
+  <form action="perfil.html" method="get">
+    <fieldset>
+      <legend>Informações pessoais</legend>
+
+      <p>
+        <label for="perfil-email">E-mail</label><br>
+        <input type="email" id="perfil-email" name="email" value="joaodasilva@pet.com" required>
+      </p>
+
+      <p>
+        <label for="perfil-nome">Nome</label><br>
+        <input type="text" id="perfil-nome" name="nome" value="João" required>
+      </p>
+
+      <p>
+        <label for="perfil-sobrenome">Sobrenome</label><br>
+        <input type="text" id="perfil-sobrenome" name="sobrenome" value="da Silva">
+      </p>
+
+      <p>
+        <label for="perfil-telefone">Telefone</label><br>
+        <input type="tel" id="perfil-telefone" name="telefone" value="+55 (73) 99876-8943" required>
+      </p>
+
+      <p>
+        <label for="perfil-foto">Alterar foto</label><br>
+        <input type="file" id="perfil-foto" name="foto" accept="image/*">
+      </p>
+
+      <p>
+        <button type="submit">Salvar perfil</button>
+        <button type="reset">Limpar</button>
+      </p>
+    </fieldset>
+  </form>
+</section>
+  </main>
+
+  <footer>
+    <p>Hotel Pet — projeto acadêmico. Primeira entrega: HTML estático.</p>
+  </footer>
+</body>
+</html>

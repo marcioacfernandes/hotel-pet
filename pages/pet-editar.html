@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Editar pet — sistema Hotel Pet.">
+  <title>Hotel Pet | Editar pet</title>
+</head>
+<body>
+  <header>
+    <h1>Hotel Pet</h1>
+    <p><strong>Perfil ativo:</strong> Gerente — João da Silva</p>
+
+    <nav aria-label="Menu principal">
+      <a href="reservas.html">Reservas</a>
+          <a href="pets.html" aria-current="page">Pets</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="configuracoes.html">Configurações</a>
+          <a href="perfil.html">Meu perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <nav aria-label="Caminho da página">
+      <p>Home / Pets / Editar pet</p>
+    </nav>
+
+    <section aria-labelledby="titulo-editar-pet">
+  <h2 id="titulo-editar-pet">Editar pet</h2>
+
+  <form action="pets.html" method="get">
+    <fieldset>
+      <legend>Informações do animal</legend>
+
+      <p>
+        <label for="proprietario-editar-pet">Proprietário</label><br>
+        <select id="proprietario-editar-pet" name="proprietario">
+          <option selected>Ana Souza</option>
+          <option>Carlos Lima</option>
+          <option>Maria Oliveira</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="nome-editar-pet">Nome</label><br>
+        <input type="text" id="nome-editar-pet" name="nome" value="Mel" required>
+      </p>
+
+      <p>
+        <label for="tipo-editar-pet">Tipo de animal</label><br>
+        <select id="tipo-editar-pet" name="tipo">
+          <option selected>Cachorro</option>
+          <option>Gato</option>
+          <option>Outro</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="raca-editar-pet">Raça</label><br>
+        <input type="text" id="raca-editar-pet" name="raca" value="Golden Retriever">
+      </p>
+
+      <p>
+        <label for="tamanho-editar-pet">Tamanho</label><br>
+        <select id="tamanho-editar-pet" name="tamanho">
+          <option>Pequeno</option>
+          <option>Médio</option>
+          <option selected>Grande</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="foto-editar-pet">Substituir foto</label><br>
+        <input type="file" id="foto-editar-pet" name="foto" accept="image/*">
+      </p>
+
+      <p>
+        <button type="submit">Salvar alterações</button>
+        <button type="reset">Limpar</button>
+        <a href="pets.html">Cancelar</a>
+      </p>
+    </fieldset>
+  </form>
+</section>
+  </main>
+
+  <footer>
+    <p>Hotel Pet — projeto acadêmico. Primeira entrega: HTML estático.</p>
+  </footer>
+</body>
+</html>
