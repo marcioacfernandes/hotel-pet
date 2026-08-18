@@ -1,0 +1,41 @@
+:root {
+--azul: #075bd7;
+--azul-menu: #dce9ff;
+--fundo: #f1f1f1;
+--painel: #ffffff;
+--cinza-tabela: #d4d4d4;
+--cinza-borda: #c9c9c9;
+--cinza-texto: #777777;
+--texto: #222222;
+--roxo: #bd42d5;
+--verde: #2cac75;
+--vermelho: #f05c5c;
+--sombra: 0 8px 24px rgba(0, 0, 0, 0.08);
+--raio: 8px;
+}
+* {
+box-sizing: border-box;
+}
+html {
+scroll-behavior: smooth;
+}
+body {
+background: var(--fundo);
+color: var(--texto);
+font-family: Arial, Helvetica, sans-serif;
+line-height: 1.5;
+margin: 0;
+min-width: 320px;
+}
+img {
+max-width: 100%;
+}
+button,
+input,
+select,
+textarea {
+font: inherit;
+}
+a {
+color: var(--azul);
+}
