@@ -413,3 +413,209 @@ scroll-behavior: auto;
 transition-duration: 0.01ms !important;
 }
 }
+
+.pagina-inicial {
+--azul-escuro: #0b1f33;
+--azul: #075bd7;
+--azul-claro: #e5efff;
+--coral: #f2764b;
+--creme: #fffaf4;
+--texto: #203040;
+--texto-suave: #617080;
+background: var(--creme);
+color: var(--texto);
+display: block;
+min-width: 320px;
+}
+.pagina-inicial .topo-inicial {
+align-items: center;
+background: var(--creme);
+border: 0;
+display: flex;
+justify-content: space-between;
+min-height: auto;
+padding: 22px clamp(20px, 6vw, 88px);
+position: static;
+}
+.pagina-inicial .marca-inicial {
+color: var(--azul);
+font-size: clamp(1.5rem, 3vw, 2rem);
+font-weight: 800;
+letter-spacing: -0.04em;
+text-decoration: none;
+}
+.pagina-inicial .assinatura-inicial {
+color: var(--texto-suave);
+font-size: 0.95rem;
+margin: 0;
+}
+.pagina-inicial main {
+margin: 0;
+max-width: none;
+padding: 0;
+width: 100%;
+}
+.pagina-inicial .hero-inicial {
+align-items: stretch;
+background: var(--azul-escuro);
+border-radius: 0;
+box-shadow: none;
+display: grid;
+grid-template-columns: minmax(300px, 0.85fr) minmax(420px, 1.15fr);
+margin: 0;
+min-height: min(660px, calc(100vh - 90px));
+overflow: hidden;
+padding: 0;
+}
+.pagina-inicial .hero-conteudo {
+align-self: center;
+max-width: 620px;
+padding: clamp(42px, 7vw, 96px);
+position: relative;
+z-index: 1;
+}
+.pagina-inicial .selo-inicial {
+color: var(--coral);
+font-size: 0.78rem;
+font-weight: 800;
+letter-spacing: 0.13em;
+margin: 0 0 16px;
+text-transform: uppercase;
+}
+.pagina-inicial .hero-conteudo h1 {
+color: #ffffff;
+font-size: clamp(2.6rem, 5vw, 5.2rem);
+line-height: 1.02;
+margin: 0 0 24px;
+max-width: 600px;
+}
+.pagina-inicial .texto-hero {
+color: #d8e4ef;
+font-size: clamp(1rem, 1.4vw, 1.2rem);
+line-height: 1.7;
+margin: 0 0 30px;
+max-width: 500px;
+}
+.pagina-inicial .botao-hero {
+background: var(--coral);
+border: 2px solid var(--coral);
+border-radius: 999px;
+color: #ffffff;
+font-weight: 700;
+padding: 13px 24px;
+}
+.pagina-inicial .botao-hero:hover {
+background: #df5f38;
+border-color: #df5f38;
+color: #ffffff;
+}
+.pagina-inicial .hero-visual {
+min-height: 520px;
+overflow: hidden;
+position: relative;
+}
+.pagina-inicial .hero-visual::after {
+background: linear-gradient(90deg, var(--azul-escuro) 0%, transparent 22%);
+content: "";
+inset: 0;
+pointer-events: none;
+position: absolute;
+}
+.pagina-inicial .hero-visual img {
+display: block;
+height: 100%;
+max-width: none;
+object-fit: cover;
+object-position: center;
+width: 100%;
+}
+.pagina-inicial .beneficios-inicial {
+background: var(--creme);
+border: 0;
+border-radius: 0;
+box-shadow: none;
+margin: 0;
+padding: clamp(54px, 8vw, 96px) clamp(20px, 6vw, 88px);
+}
+.pagina-inicial .cabecalho-beneficios {
+margin: 0 auto 34px;
+max-width: 720px;
+text-align: center;
+}
+.pagina-inicial .cabecalho-beneficios .selo-inicial {
+color: var(--azul);
+margin-bottom: 10px;
+}
+.pagina-inicial .cabecalho-beneficios h2 {
+color: var(--azul-escuro);
+font-size: clamp(1.8rem, 3vw, 3rem);
+margin: 0;
+}
+.pagina-inicial .cards-beneficios {
+display: grid;
+gap: 20px;
+grid-template-columns: repeat(3, 1fr);
+margin: 0 auto;
+max-width: 1180px;
+}
+.pagina-inicial .card-beneficio {
+background: #ffffff;
+border: 1px solid #e8dfd5;
+border-radius: 16px;
+box-shadow: 0 8px 24px rgba(11, 31, 51, 0.06);
+padding: 28px;
+}
+.pagina-inicial .card-beneficio h3 {
+color: var(--azul-escuro);
+font-size: 1.15rem;
+margin: 0 0 10px;
+}
+.pagina-inicial .card-beneficio p {
+color: var(--texto-suave);
+line-height: 1.65;
+margin: 0;
+}
+
+.pagina-inicial .rodape-inicial {
+background: var(--azul-escuro);
+color: #d8e4ef;
+padding: 22px clamp(20px, 6vw, 88px);
+text-align: center;
+}
+.pagina-inicial .rodape-inicial p {
+margin: 0;
+}
+
+@media (max-width: 860px) {
+.pagina-inicial .topo-inicial {
+align-items: flex-start;
+flex-direction: column;
+gap: 6px;
+}
+.pagina-inicial .hero-inicial {
+grid-template-columns: 1fr;
+}
+.pagina-inicial .hero-conteudo {
+max-width: none;
+padding: 60px 24px 48px;
+}
+.pagina-inicial .hero-visual {
+min-height: 360px;
+}
+.pagina-inicial .hero-visual::after {
+background: linear-gradient(0deg, var(--azul-escuro) 0%, transparent 28%);
+}
+.pagina-inicial .cards-beneficios {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 480px) {
+.pagina-inicial .hero-conteudo h1 {
+font-size: 2.5rem;
+}
+.pagina-inicial .hero-visual {
+min-height: 280px;
+}
+}
+
