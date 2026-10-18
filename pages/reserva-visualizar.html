@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,54 +8,119 @@
   <title>Hotel Pet | Visualizar reserva</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
+
   <header>
     <h1>Hotel Pet</h1>
-    <img class="avatar" src="../imagens/avatar.svg" alt="Avatar de João da Silva">
-    <p><strong>Perfil ativo:</strong> Gerente — João da Silva</p>
+
+    <img class="avatar"
+         src="../imagens/avatar.svg"
+         alt="Avatar de João da Silva">
+
+    <p>
+      <strong>Perfil ativo:</strong>
+      Gerente — João da Silva
+    </p>
 
     <nav aria-label="Menu principal">
       <a href="reservas.html" aria-current="page">Reservas</a>
-          <a href="pets.html">Pets</a>
-          <a href="usuarios.html">Usuários</a>
-          <a href="configuracoes.html">Configurações</a>
-          <a href="perfil.html">Meu perfil</a>
+      <a href="pets.html">Pets</a>
+      <a href="usuarios.html">Usuários</a>
+      <a href="configuracoes.html">Configurações</a>
+      <a href="perfil.html">Meu perfil</a>
     </nav>
   </header>
 
   <main>
+
     <nav aria-label="Caminho da página">
-      <p>Home / Reservas / Visualizar reserva</p>
+      <p>
+        <a href="../index.html">Home</a> /
+        <a href="reservas.html">Reservas</a> /
+        Visualizar reserva
+      </p>
     </nav>
 
     <section aria-labelledby="titulo-visualizar-reserva">
-  <h2 id="titulo-visualizar-reserva">Visualizar reserva em andamento</h2>
 
-  <h3>Dados da reserva</h3>
-  <p><strong>Código:</strong> R001</p>
-  <p><strong>Pet:</strong> Mel</p>
-  <p><strong>Responsável:</strong> Ana Souza</p>
-  <p><strong>Período:</strong> 14/08/2026 a 18/08/2026</p>
-  <p><strong>Status:</strong> Em andamento</p>
-  <p><strong>Valor total:</strong> R$ 320,00</p>
+      <h2 id="titulo-visualizar-reserva">
+        Visualizar reserva em andamento
+      </h2>
 
-  <h3>Anotações da estadia</h3>
-  <p>Mel se alimentou bem e brincou no período da manhã.</p>
+      <!-- Dados da reserva -->
+      <h3>Dados da reserva</h3>
 
-  <h3>Registros de imagens</h3>
-  <figure>
-    <figcaption>Imagem 1: Mel durante o passeio matinal — registro estático; a imagem será adicionada em uma etapa posterior.</figcaption>
-  </figure>
-  <figure>
-    <figcaption>Imagem 2: Mel na área de recreação — registro estático; a imagem será adicionada em uma etapa posterior.</figcaption>
-  </figure>
+      <div class="dados-visualizacao">
 
-  <p><a href="reserva-editar.html">Editar reserva</a> | <a href="reservas.html">Voltar para reservas</a></p>
-</section>
+        <p><strong>Código:</strong> R001</p>
+
+        <p><strong>Pet:</strong> Mel</p>
+
+        <p><strong>Responsável:</strong> Ana Souza</p>
+
+        <p><strong>Data de chegada:</strong> 14/08/2026</p>
+
+        <p><strong>Data de partida:</strong> 18/08/2026</p>
+
+        <p>
+          <strong>Status:</strong>
+          <span class="status status-andamento">
+            Em andamento
+          </span>
+        </p>
+
+        <p><strong>Valor total:</strong> R$ 320,00</p>
+
+      </div>
+
+      <!-- Anotações da estadia -->
+      <h3>Anotações da estadia</h3>
+
+      <p>
+        Mel se alimentou bem e brincou no período da manhã.
+      </p>
+
+      <!-- Registros de imagens -->
+      <h3>Registros de imagens</h3>
+
+      <figure>
+        <figcaption>
+          Imagem 1: Mel durante o passeio matinal —
+          registro estático; a imagem será adicionada
+          em uma etapa posterior.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <figcaption>
+          Imagem 2: Mel na área de recreação —
+          registro estático; a imagem será adicionada
+          em uma etapa posterior.
+        </figcaption>
+      </figure>
+
+      <!-- Ações -->
+      <p>
+        <a href="reserva-editar.html?id=R001">
+          Editar reserva
+        </a>
+        |
+        <a href="reservas.html">
+          Voltar para reservas
+        </a>
+      </p>
+
+      <!-- Mensagens futuras -->
+      <p id="mensagem-visualizar-reserva" role="status"></p>
+
+    </section>
+
   </main>
 
   <footer>
-  <p>Hotel Pet — Trabalho Final.</p>
+    <p>Hotel Pet — Trabalho Final.</p>
   </footer>
+
 </body>
 </html>

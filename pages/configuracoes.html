@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,53 +8,117 @@
   <title>Hotel Pet | Configurações</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
+
   <header>
     <h1>Hotel Pet</h1>
-    <img class="avatar" src="../imagens/avatar.svg" alt="Avatar de João da Silva">
-    <p><strong>Perfil ativo:</strong> Gerente — João da Silva</p>
+
+    <img class="avatar"
+         src="../imagens/avatar.svg"
+         alt="Avatar de João da Silva">
+
+    <p>
+      <strong>Perfil ativo:</strong>
+      Gerente — João da Silva
+    </p>
 
     <nav aria-label="Menu principal">
       <a href="reservas.html">Reservas</a>
-          <a href="pets.html">Pets</a>
-          <a href="usuarios.html">Usuários</a>
-          <a href="configuracoes.html" aria-current="page">Configurações</a>
-          <a href="perfil.html">Meu perfil</a>
+      <a href="pets.html">Pets</a>
+      <a href="usuarios.html">Usuários</a>
+      <a href="configuracoes.html" aria-current="page">
+        Configurações
+      </a>
+      <a href="perfil.html">Meu perfil</a>
     </nav>
   </header>
 
   <main>
+
     <nav aria-label="Caminho da página">
-      <p>Home / Configurações</p>
+      <p>
+        <a href="../index.html">Home</a> /
+        Configurações
+      </p>
     </nav>
 
     <section aria-labelledby="titulo-configuracoes">
-  <h2 id="titulo-configuracoes">Configurações do Hotel Pet</h2>
-  <p>Este menu é exclusivo da visão do gerente.</p>
 
-  <form action="configuracoes.html" method="get">
-    <fieldset>
-      <legend>Configurações operacionais</legend>
+      <h2 id="titulo-configuracoes">
+        Configurações do Hotel Pet
+      </h2>
 
       <p>
-        <label for="valor-diaria">Valor da diária</label><br>
-        <input type="number" id="valor-diaria" name="valor-diaria" min="0" step="0.01" value="80.00" required>
+        Este menu é exclusivo da visão do gerente.
       </p>
+
+      <!-- Formulário de configurações -->
+      <form id="form-configuracoes"
+            action="configuracoes.html"
+            method="get">
+
+        <fieldset>
+          <legend>Configurações operacionais</legend>
+
+          <!-- Valor da diária -->
+          <p>
+            <label for="valor-diaria">
+              Valor da diária (R$)
+            </label><br>
+
+            <input type="number"
+                   id="valor-diaria"
+                   name="valor-diaria"
+                   min="0"
+                   step="0.01"
+                   value="80.00"
+                   required>
+          </p>
+
+          <!-- Quantidade de vagas -->
+          <p>
+            <label for="vagas-disponiveis">
+              Número de vagas disponíveis
+            </label><br>
+
+            <input type="number"
+                   id="vagas-disponiveis"
+                   name="vagas-disponiveis"
+                   min="0"
+                   step="1"
+                   value="20"
+                   required>
+          </p>
+
+          <!-- Botões -->
+          <p>
+            <button type="submit">
+              Salvar configurações
+            </button>
+
+            <button type="reset">
+              Limpar
+            </button>
+          </p>
+
+        </fieldset>
+      </form>
+
+      <!-- Mensagens futuras -->
+      <p id="mensagem-configuracoes" role="status"></p>
 
       <p>
-        <label for="vagas-disponiveis">Número de vagas disponíveis</label><br>
-        <input type="number" id="vagas-disponiveis" name="vagas-disponiveis" min="0" value="20" required>
+        <small>
+          Nesta etapa, os dados são demonstrativos.
+          O armazenamento das configurações será
+          implementado posteriormente com JavaScript.
+        </small>
       </p>
 
-      <p>
-        <button type="submit">Salvar configurações</button>
-        <button type="reset">Limpar</button>
-      </p>
-    </fieldset>
-  </form>
+    </section>
 
-  <p><small>Os dados não são persistidos porque esta é uma entrega estática em HTML.</small></p>
-</section>
   </main>
+
 </body>
 </html>

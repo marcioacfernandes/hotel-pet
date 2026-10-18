@@ -137,8 +137,6 @@ font-size: 1.2rem;
 margin-top: 28px;
 }
 
-<a class="botao botao-principal" href="reserva-nova.html">Cadastrar nova reserva</a>
-
 button,
 .botao {
 border: 2px solid var(--azul);

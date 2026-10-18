@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,87 +8,151 @@
   <title>Hotel Pet | Novo pet</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
+
   <header>
     <h1>Hotel Pet</h1>
-    <img class="avatar" src="../imagens/avatar.svg" alt="Avatar de João da Silva">
-    <p><strong>Perfil ativo:</strong> Gerente — João da Silva</p>
+
+    <img class="avatar"
+         src="../imagens/avatar.svg"
+         alt="Avatar de João da Silva">
+
+    <p>
+      <strong>Perfil ativo:</strong>
+      Gerente — João da Silva
+    </p>
 
     <nav aria-label="Menu principal">
       <a href="reservas.html">Reservas</a>
-          <a href="pets.html" aria-current="page">Pets</a>
-          <a href="usuarios.html">Usuários</a>
-          <a href="configuracoes.html">Configurações</a>
-          <a href="perfil.html">Meu perfil</a>
+      <a href="pets.html" aria-current="page">Pets</a>
+      <a href="usuarios.html">Usuários</a>
+      <a href="configuracoes.html">Configurações</a>
+      <a href="perfil.html">Meu perfil</a>
     </nav>
   </header>
 
   <main>
+
     <nav aria-label="Caminho da página">
-      <p>Home / Pets / Novo pet</p>
+      <p>
+        <a href="../index.html">Home</a> /
+        <a href="pets.html">Pets</a> /
+        Novo pet
+      </p>
     </nav>
 
     <section aria-labelledby="titulo-novo-pet">
-  <h2 id="titulo-novo-pet">Cadastrar novo pet</h2>
-  <p>Como gerente, o campo proprietário fica disponível, assim como na visão do funcionário.</p>
 
-  <form action="pets.html" method="get">
-    <fieldset>
-      <legend>Informações do animal</legend>
+      <h2 id="titulo-novo-pet">Cadastrar novo pet</h2>
 
       <p>
-        <label for="proprietario-pet">Proprietário</label><br>
-        <select id="proprietario-pet" name="proprietario" required>
-          <option value="">Selecione</option>
-          <option>Ana Souza</option>
-          <option>Carlos Lima</option>
-          <option>Maria Oliveira</option>
-        </select>
+        Como gerente, o campo proprietário fica disponível,
+        assim como na visão do funcionário.
       </p>
 
-      <p>
-        <label for="nome-novo-pet">Nome</label><br>
-        <input type="text" id="nome-novo-pet" name="nome" required>
-      </p>
+      <!-- Formulário de cadastro -->
+      <form id="form-novo-pet"
+            action="pets.html"
+            method="get">
 
-      <p>
-        <label for="tipo-novo-pet">Tipo de animal</label><br>
-        <select id="tipo-novo-pet" name="tipo" required>
-          <option value="">Selecione</option>
-          <option>Cachorro</option>
-          <option>Gato</option>
-          <option>Outro</option>
-        </select>
-      </p>
+        <fieldset>
+          <legend>Informações do animal</legend>
 
-      <p>
-        <label for="raca-novo-pet">Raça</label><br>
-        <input type="text" id="raca-novo-pet" name="raca" required>
-      </p>
+          <!-- Proprietário -->
+          <p>
+            <label for="proprietario-pet">Proprietário</label><br>
 
-      <p>
-        <label for="tamanho-novo-pet">Tamanho</label><br>
-        <select id="tamanho-novo-pet" name="tamanho" required>
-          <option value="">Selecione</option>
-          <option>Pequeno</option>
-          <option>Médio</option>
-          <option>Grande</option>
-        </select>
-      </p>
+            <select id="proprietario-pet"
+                    name="proprietario"
+                    required>
 
-      <p>
-        <label for="foto-pet">Foto do pet</label><br>
-        <input type="file" id="foto-pet" name="foto" accept="image/*">
-      </p>
+              <option value="">Selecione</option>
+              <option value="Ana Souza">Ana Souza</option>
+              <option value="Carlos Lima">Carlos Lima</option>
+              <option value="Maria Oliveira">Maria Oliveira</option>
 
-      <p>
-        <button type="submit">Salvar pet</button>
-        <button type="reset">Limpar</button>
-        <a href="pets.html">Cancelar</a>
-      </p>
-    </fieldset>
-  </form>
-</section>
+            </select>
+          </p>
+
+          <!-- Nome -->
+          <p>
+            <label for="nome-novo-pet">Nome</label><br>
+
+            <input type="text"
+                   id="nome-novo-pet"
+                   name="nome"
+                   required>
+          </p>
+
+          <!-- Tipo -->
+          <p>
+            <label for="tipo-novo-pet">Tipo de animal</label><br>
+
+            <select id="tipo-novo-pet"
+                    name="tipo"
+                    required>
+
+              <option value="">Selecione</option>
+              <option value="Cachorro">Cachorro</option>
+              <option value="Gato">Gato</option>
+              <option value="Outro">Outro</option>
+
+            </select>
+          </p>
+
+          <!-- Raça -->
+          <p>
+            <label for="raca-novo-pet">Raça</label><br>
+
+            <input type="text"
+                   id="raca-novo-pet"
+                   name="raca"
+                   required>
+          </p>
+
+          <!-- Tamanho -->
+          <p>
+            <label for="tamanho-novo-pet">Tamanho</label><br>
+
+            <select id="tamanho-novo-pet"
+                    name="tamanho"
+                    required>
+
+              <option value="">Selecione</option>
+              <option value="Pequeno">Pequeno</option>
+              <option value="Médio">Médio</option>
+              <option value="Grande">Grande</option>
+
+            </select>
+          </p>
+
+          <!-- Foto -->
+          <p>
+            <label for="foto-pet">Foto do pet</label><br>
+
+            <input type="file"
+                   id="foto-pet"
+                   name="foto"
+                   accept="image/*">
+          </p>
+
+          <!-- Botões -->
+          <p>
+            <button type="submit">Salvar pet</button>
+            <button type="reset">Limpar</button>
+            <a href="pets.html">Cancelar</a>
+          </p>
+
+        </fieldset>
+      </form>
+
+      <!-- Mensagens do formulário -->
+      <p id="mensagem-novo-pet" role="status"></p>
+
+    </section>
+
   </main>
+
 </body>
 </html>

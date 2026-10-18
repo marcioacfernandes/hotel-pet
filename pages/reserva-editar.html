@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,94 +8,199 @@
   <title>Hotel Pet | Editar reserva</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
+
   <header>
     <h1>Hotel Pet</h1>
-    <img class="avatar" src="../imagens/avatar.svg" alt="Avatar de João da Silva">
-    <p><strong>Perfil ativo:</strong> Gerente — João da Silva</p>
+
+    <img class="avatar"
+         src="../imagens/avatar.svg"
+         alt="Avatar de João da Silva">
+
+    <p>
+      <strong>Perfil ativo:</strong>
+      Gerente — João da Silva
+    </p>
 
     <nav aria-label="Menu principal">
       <a href="reservas.html" aria-current="page">Reservas</a>
-          <a href="pets.html">Pets</a>
-          <a href="usuarios.html">Usuários</a>
-          <a href="configuracoes.html">Configurações</a>
-          <a href="perfil.html">Meu perfil</a>
+      <a href="pets.html">Pets</a>
+      <a href="usuarios.html">Usuários</a>
+      <a href="configuracoes.html">Configurações</a>
+      <a href="perfil.html">Meu perfil</a>
     </nav>
   </header>
 
   <main>
+
     <nav aria-label="Caminho da página">
-      <p>Home / Reservas / Editar reserva</p>
+      <p>
+        <a href="../index.html">Home</a> /
+        <a href="reservas.html">Reservas</a> /
+        Editar reserva
+      </p>
     </nav>
 
     <section aria-labelledby="titulo-editar-reserva">
-  <h2 id="titulo-editar-reserva">Editar reserva</h2>
-  <p>Esta tela representa a permissão exclusiva do gerente para alterar também reservas finalizadas.</p>
 
-  <form action="reservas.html" method="get">
-    <fieldset>
-      <legend>Informações principais</legend>
+      <h2 id="titulo-editar-reserva">Editar reserva</h2>
 
       <p>
-        <label for="codigo-reserva">Código</label><br>
-        <input type="text" id="codigo-reserva" name="codigo" value="R002" readonly>
+        Esta tela representa a permissão exclusiva do gerente
+        para alterar também reservas finalizadas.
       </p>
 
-      <p>
-        <label for="pet-editar-reserva">Pet</label><br>
-        <select id="pet-editar-reserva" name="pet">
-          <option selected>Thor — Cachorro</option>
-          <option>Mel — Cachorro</option>
-          <option>Luna — Gato</option>
-        </select>
-      </p>
+      <!-- Formulário de edição -->
+      <form id="form-editar-reserva"
+            action="reservas.html"
+            method="get">
 
-      <p>
-        <label for="entrada-editar">Data de entrada</label><br>
-        <input type="date" id="entrada-editar" name="entrada" value="2026-08-01">
-      </p>
+        <fieldset>
+          <legend>Informações principais</legend>
 
-      <p>
-        <label for="saida-editar">Data de saída</label><br>
-        <input type="date" id="saida-editar" name="saida" value="2026-08-05">
-      </p>
+          <!-- Código -->
+          <p>
+            <label for="codigo-reserva">Código</label><br>
 
-      <p>
-        <label for="status-reserva">Status</label><br>
-        <select id="status-reserva" name="status">
-          <option>Confirmada</option>
-          <option>Em andamento</option>
-          <option selected>Finalizada</option>
-        </select>
-      </p>
-    </fieldset>
+            <input type="text"
+                   id="codigo-reserva"
+                   name="codigo"
+                   value="R002"
+                   readonly>
+          </p>
 
-    <fieldset>
-      <legend>Registros da estadia</legend>
+          <!-- Pet -->
+          <p>
+            <label for="pet-editar-reserva">Pet</label><br>
 
-      <p>
-        <label for="anotacoes">Anotações do funcionário/gerente</label><br>
-        <textarea id="anotacoes" name="anotacoes" rows="5" cols="50">Thor apresentou bom comportamento e realizou os passeios normalmente.</textarea>
-      </p>
+            <select id="pet-editar-reserva"
+                    name="pet"
+                    required>
 
-      <p>
-        <label for="imagens-estadia">Adicionar imagens da estadia</label><br>
-        <input type="file" id="imagens-estadia" name="imagens-estadia" accept="image/*" multiple>
-      </p>
+              <option value="Thor" selected>
+                Thor — Cachorro
+              </option>
 
-      <p>
-        <label for="recibo">Adicionar ou substituir recibo/nota da estadia</label><br>
-        <input type="file" id="recibo" name="recibo" accept=".pdf,image/*">
-      </p>
-    </fieldset>
+              <option value="Mel">
+                Mel — Cachorro
+              </option>
 
-    <p>
-      <button type="submit">Salvar alterações</button>
-      <button type="reset">Limpar</button>
-      <a href="reservas.html">Cancelar</a>
-    </p>
-  </form>
-</section>
+              <option value="Luna">
+                Luna — Gato
+              </option>
+
+            </select>
+          </p>
+
+          <!-- Data de entrada -->
+          <p>
+            <label for="entrada-editar">
+              Data de entrada
+            </label><br>
+
+            <input type="date"
+                   id="entrada-editar"
+                   name="entrada"
+                   value="2026-08-01"
+                   required>
+          </p>
+
+          <!-- Data de saída -->
+          <p>
+            <label for="saida-editar">
+              Data de saída
+            </label><br>
+
+            <input type="date"
+                   id="saida-editar"
+                   name="saida"
+                   value="2026-08-05"
+                   required>
+          </p>
+
+          <!-- Status -->
+          <p>
+            <label for="status-reserva">Status</label><br>
+
+            <select id="status-reserva"
+                    name="status"
+                    required>
+
+              <option value="confirmada">
+                Confirmada
+              </option>
+
+              <option value="andamento">
+                Em andamento
+              </option>
+
+              <option value="finalizada" selected>
+                Finalizada
+              </option>
+
+            </select>
+          </p>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Registros da estadia</legend>
+
+          <!-- Anotações -->
+          <p>
+            <label for="anotacoes">
+              Anotações do funcionário/gerente
+            </label><br>
+
+            <textarea id="anotacoes"
+                      name="anotacoes"
+                      rows="5"
+                      cols="50">Thor apresentou bom comportamento e realizou os passeios normalmente.</textarea>
+          </p>
+
+          <!-- Imagens -->
+          <p>
+            <label for="imagens-estadia">
+              Adicionar imagens da estadia
+            </label><br>
+
+            <input type="file"
+                   id="imagens-estadia"
+                   name="imagens-estadia"
+                   accept="image/*"
+                   multiple>
+          </p>
+
+          <!-- Recibo -->
+          <p>
+            <label for="recibo">
+              Adicionar ou substituir recibo/nota da estadia
+            </label><br>
+
+            <input type="file"
+                   id="recibo"
+                   name="recibo"
+                   accept=".pdf,image/*">
+          </p>
+
+        </fieldset>
+
+        <!-- Botões -->
+        <p>
+          <button type="submit">Salvar alterações</button>
+          <button type="reset">Limpar</button>
+          <a href="reservas.html">Cancelar</a>
+        </p>
+
+      </form>
+
+      <!-- Mensagens -->
+      <p id="mensagem-editar-reserva" role="status"></p>
+
+    </section>
+
   </main>
+
 </body>
 </html>

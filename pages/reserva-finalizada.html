@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,43 +8,125 @@
   <title>Hotel Pet | Reserva finalizada</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
+
   <header>
     <h1>Hotel Pet</h1>
-    <p><strong>Perfil ativo:</strong> Gerente — João da Silva</p>
+
+    <img class="avatar"
+         src="../imagens/avatar.svg"
+         alt="Avatar de João da Silva">
+
+    <p>
+      <strong>Perfil ativo:</strong>
+      Gerente — João da Silva
+    </p>
 
     <nav aria-label="Menu principal">
       <a href="reservas.html" aria-current="page">Reservas</a>
-          <a href="pets.html">Pets</a>
-          <a href="usuarios.html">Usuários</a>
-          <a href="configuracoes.html">Configurações</a>
-          <a href="perfil.html">Meu perfil</a>
+      <a href="pets.html">Pets</a>
+      <a href="usuarios.html">Usuários</a>
+      <a href="configuracoes.html">Configurações</a>
+      <a href="perfil.html">Meu perfil</a>
     </nav>
   </header>
 
   <main>
+
     <nav aria-label="Caminho da página">
-      <p>Home / Reservas / Reserva finalizada</p>
+      <p>
+        <a href="../index.html">Home</a> /
+        <a href="reservas.html">Reservas</a> /
+        Reserva finalizada
+      </p>
     </nav>
 
     <section aria-labelledby="titulo-reserva-finalizada">
-  <h2 id="titulo-reserva-finalizada">Visualizar reserva finalizada</h2>
 
-  <p><strong>Código:</strong> R002</p>
-  <p><strong>Pet:</strong> Thor</p>
-  <p><strong>Status:</strong> Finalizada</p>
-  <p><strong>Período:</strong> 01/08/2026 a 05/08/2026</p>
+      <h2 id="titulo-reserva-finalizada">
+        Visualizar reserva finalizada
+      </h2>
 
-  <h3>Anotações</h3>
-  <p>Thor concluiu sua estadia sem intercorrências.</p>
+      <!-- Informações da reserva -->
+      <h3>Dados da reserva</h3>
 
-  <h3>Recibo ou nota da estadia</h3>
-  <p>Recibo R002-2026.pdf — arquivo representado apenas como texto nesta entrega.</p>
+      <div class="dados-visualizacao">
 
-  <p><strong>Regra dos perfis:</strong> cliente e funcionário apenas visualizam reservas finalizadas. O gerente pode abrir a edição desta reserva.</p>
+        <p><strong>Código:</strong> R002</p>
 
-  <p><a href="reserva-editar.html">Editar como gerente</a> | <a href="reservas.html">Voltar para reservas</a></p>
-</section>
+        <p><strong>Pet:</strong> Thor</p>
+
+        <p><strong>Responsável:</strong> Carlos Lima</p>
+
+        <p><strong>Data de chegada:</strong> 01/08/2026</p>
+
+        <p><strong>Data de partida:</strong> 05/08/2026</p>
+
+        <p>
+          <strong>Status:</strong>
+          <span class="status status-finalizada">
+            Finalizada
+          </span>
+        </p>
+
+        <p><strong>Valor total:</strong> R$ 280,00</p>
+
+      </div>
+
+      <!-- Histórico da estadia -->
+      <h3>Anotações</h3>
+
+      <p>
+        Thor concluiu sua estadia sem intercorrências.
+      </p>
+
+      <!-- Recibo -->
+      <h3>Recibo ou nota da estadia</h3>
+
+      <p>
+        <strong>Documento:</strong> Recibo R002-2026.pdf
+      </p>
+
+      <p>
+        <small>
+          O recibo está representado apenas como texto
+          nesta etapa do projeto. O arquivo real poderá
+          ser vinculado posteriormente.
+        </small>
+      </p>
+
+      <!-- Permissões dos perfis -->
+      <h3>Permissões de acesso</h3>
+
+      <p>
+        <strong>Regra dos perfis:</strong>
+        cliente e funcionário apenas visualizam
+        reservas finalizadas. O gerente pode abrir
+        a edição desta reserva.
+      </p>
+
+      <!-- Ações -->
+      <p>
+        <a href="reserva-editar.html?id=R002">
+          Editar como gerente
+        </a>
+        |
+        <a href="reservas.html">
+          Voltar para reservas
+        </a>
+      </p>
+
+      <!-- Mensagens futuras -->
+      <p id="mensagem-reserva-finalizada" role="status"></p>
+
+    </section>
+
   </main>
+
+  <footer>
+    <p>Hotel Pet — Trabalho Final.</p>
+  </footer>
+
 </body>
 </html>
