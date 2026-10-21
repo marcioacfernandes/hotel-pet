@@ -1,6 +1,6 @@
 "use strict";
 
-// Hotel Pet - Dados iniciais do sistema
+// Hotel Pet - Dados iniciais e armazenamento local
 
 const petsIniciais = [
   {
@@ -39,5 +39,43 @@ const reservasIniciais = [
     total: 280
   }
 ];
+
+// Chave utilizada no armazenamento do navegador
+const CHAVE_PETS = "hotelPet_pets";
+
+// Retorna os pets armazenados ou os dados iniciais
+function obterPets() {
+  const dadosSalvos = localStorage.getItem(CHAVE_PETS);
+
+  if (dadosSalvos !== null) {
+    try {
+      const pets = JSON.parse(dadosSalvos);
+
+      if (Array.isArray(pets)) {
+        return pets;
+      }
+    } catch (erro) {
+      console.error("Erro ao ler os pets salvos:", erro);
+    }
+  }
+
+  return [...petsIniciais];
+}
+
+// Salva a lista de pets
+function salvarPets(lista) {
+  localStorage.setItem(CHAVE_PETS, JSON.stringify(lista));
+}
+
+// Gera o próximo identificador disponível
+function gerarIdPet(lista) {
+  const numeros = lista.map(function(pet) {
+    return Number(String(pet.id).replace("PET", "")) || 0;
+  });
+
+  const maiorNumero = Math.max(0, ...numeros);
+
+  return "PET" + String(maiorNumero + 1).padStart(3, "0");
+}
 
 console.log("Hotel Pet: dados iniciais carregados.");
