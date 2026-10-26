@@ -100,27 +100,23 @@ function configurarPesquisaPets() {
 
   formulario.addEventListener("submit", function(evento) {
 
-    // Impede que a página seja recarregada
     evento.preventDefault();
 
-    // Localiza o campo de pesquisa pelo nome
-    const campo = formulario.querySelector(
-      'input[name="nome"]'
-    );
+    const id = formulario.elements["id"].value.trim().toLowerCase();
+    const nome = formulario.elements["nome"].value.trim().toLowerCase();
+    const tipo = formulario.elements["tipo"].value.toLowerCase();
+    const raca = formulario.elements["raca"].value.trim().toLowerCase();
+    const tamanho = formulario.elements["tamanho"].value.toLowerCase();
 
-    if (!campo) {
-      console.error("Campo de pesquisa não encontrado.");
-      return;
-    }
-
-    const pesquisa = campo.value
-      .trim()
-      .toLowerCase();
-
-    // Filtra os registros
     const resultados = obterPets().filter(function(pet) {
 
-      return pet.nome.toLowerCase().includes(pesquisa);
+      return (
+        pet.id.toLowerCase().includes(id) &&
+        pet.nome.toLowerCase().includes(nome) &&
+        (tipo === "" || pet.tipo.toLowerCase() === tipo) &&
+        pet.raca.toLowerCase().includes(raca) &&
+        (tamanho === "" || pet.tamanho.toLowerCase() === tamanho)
+      );
 
     });
 
@@ -128,7 +124,6 @@ function configurarPesquisaPets() {
 
   });
 
-  // Restaura a listagem ao limpar o formulário
   formulario.addEventListener("reset", function() {
 
     carregarPets();
