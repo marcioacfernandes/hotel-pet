@@ -25,6 +25,7 @@ const reservasIniciais = [
   {
     id: "R001",
     pet: "Mel",
+    responsavel: "Ana Souza",
     chegada: "2026-08-14",
     partida: "2026-08-18",
     status: "Em andamento",
@@ -33,6 +34,7 @@ const reservasIniciais = [
   {
     id: "R002",
     pet: "Thor",
+    responsavel: "Carlos Lima",
     chegada: "2026-08-01",
     partida: "2026-08-05",
     status: "Finalizada",
@@ -60,6 +62,24 @@ function obterPets() {
   }
 
   return [...petsIniciais];
+}
+
+function obterReservas() {
+  const dadosSalvos = localStorage.getItem("hotelPetReservas");
+
+  if (dadosSalvos !== null) {
+    try {
+      const reservas = JSON.parse(dadosSalvos);
+
+      if (Array.isArray(reservas)) {
+        return reservas;
+      }
+    } catch (erro) {
+      console.error("Erro ao ler as reservas salvas:", erro);
+    }
+  }
+
+  return [...reservasIniciais];
 }
 
 // Salva a lista de pets
