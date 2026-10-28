@@ -42,6 +42,33 @@ const reservasIniciais = [
   }
 ];
 
+const usuariosIniciais = [
+  {
+    id: "U001",
+    email: "joaodasilva@pet.com",
+    nome: "João da Silva",
+    funcao: "Gerente",
+    status: "Ativo",
+    criadoEm: "2020-02-19"
+  },
+  {
+    id: "U002",
+    email: "ana@pet.com",
+    nome: "Ana Souza",
+    funcao: "Cliente",
+    status: "Ativo",
+    criadoEm: "2026-08-01"
+  },
+  {
+    id: "U003",
+    email: "carlos@pet.com",
+    nome: "Carlos Lima",
+    funcao: "Funcionário",
+    status: "Inativo",
+    criadoEm: "2026-08-05"
+  }
+];
+
 // Chave utilizada no armazenamento do navegador
 const CHAVE_PETS = "hotelPet_pets";
 
@@ -99,3 +126,21 @@ function gerarIdPet(lista) {
 }
 
 console.log("Hotel Pet: dados iniciais carregados.");
+
+function obterUsuarios() {
+  const dadosSalvos = localStorage.getItem("hotelPetUsuarios");
+
+  if (dadosSalvos !== null) {
+    try {
+      const usuarios = JSON.parse(dadosSalvos);
+
+      if (Array.isArray(usuarios)) {
+        return usuarios;
+      }
+    } catch (erro) {
+      console.error("Erro ao ler os usuários salvos:", erro);
+    }
+  }
+
+  return [...usuariosIniciais];
+}
