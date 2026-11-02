@@ -46,64 +46,11 @@
 
       <h2 id="titulo-visualizar-pet">Visualizar pet</h2>
 
-      <div class="dados-visualizacao"></div>
+      <div id="dados-pet" class="dados-visualizacao"></div>
 
-      <!-- Informações do pet -->
-      <h3>Características</h3>
-
-      <p><strong>ID:</strong> PET001</p>
-      <p><strong>Nome:</strong> Mel</p>
-      <p><strong>Tipo:</strong> Cachorro</p>
-      <p><strong>Raça:</strong> Golden Retriever</p>
-      <p><strong>Tamanho:</strong> Grande</p>
-      <p><strong>Proprietário:</strong> Ana Souza</p>
-
+            <!-- Ações disponíveis -->
       <p>
-        <strong>Foto:</strong>
-        arquivo de imagem representado apenas pelo
-        campo de cadastro nesta entrega.
-      </p>
-
-      <!-- Histórico de reservas -->
-      <h3>Histórico de reservas</h3>
-
-      <table>
-        <caption>Reservas do pet Mel</caption>
-
-        <thead>
-          <tr>
-            <th scope="col">Código</th>
-            <th scope="col">Período</th>
-            <th scope="col">Status</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>R001</td>
-            <td>14/08/2026 a 18/08/2026</td>
-            <td>
-              <span class="status status-andamento">
-                Em andamento
-              </span>
-            </td>
-          </tr>
-
-          <tr>
-            <td>R010</td>
-            <td>02/06/2026 a 05/06/2026</td>
-            <td>
-              <span class="status status-finalizada">
-                Finalizada
-              </span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Ações disponíveis -->
-      <p>
-        <a href="pet-editar.html?id=PET001">
+        <a href="pet-editar.html" id="link-editar-pet">
           Editar informações
         </a>
         |
@@ -115,7 +62,17 @@
       </p>
 
       <p id="mensagem-visualizar-pet" role="status"></p>
-
+<table>
+    <caption id="legenda-reservas">Histórico de reservas</caption>
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Período</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody id="historico-reservas"></tbody>
+</table>
       <p>
         <small>
           O botão Excluir pet é apenas visual nesta etapa.
@@ -128,5 +85,7 @@
 
   </main>
 
+<script src="../js/dados.js"></script>
+<script src="../js/pet-visualizar.js"></script>
 </body>
 </html>
