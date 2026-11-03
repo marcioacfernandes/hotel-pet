@@ -53,40 +53,41 @@
 
       <div class="dados-visualizacao">
 
-        <p><strong>Código:</strong> R002</p>
+      <p><strong>Código:</strong> <span id="visualizar-codigo">R002</span></p>
 
-        <p><strong>Pet:</strong> Thor</p>
+       <p><strong>Pet:</strong> <span id="visualizar-pet">Thor</span></p>
 
-        <p><strong>Responsável:</strong> Carlos Lima</p>
+       <p><strong>Responsável:</strong> <span id="visualizar-responsavel">Carlos Lima</span></p>
 
-        <p><strong>Data de chegada:</strong> 01/08/2026</p>
+       <p><strong>Data de chegada:</strong> <span id="visualizar-chegada">01/08/2026</span></p>
 
-        <p><strong>Data de partida:</strong> 05/08/2026</p>
+       <p><strong>Data de partida:</strong> <span id="visualizar-partida">05/08/2026</span></p>
 
-        <p>
-          <strong>Status:</strong>
-          <span class="status status-finalizada">
-            Finalizada
-          </span>
-        </p>
+      <p>
+  <strong>Status:</strong>
+  <span id="visualizar-status" class="status status-finalizada">
+    Finalizada
+  </span>
+</p>
 
-        <p><strong>Valor total:</strong> R$ 280,00</p>
+       <p><strong>Valor total:</strong> <span id="visualizar-total">R$ 280,00</span></p>
 
       </div>
 
-      <!-- Histórico da estadia -->
-      <h3>Anotações</h3>
+     <!-- Histórico da estadia -->
+<h3>Anotações</h3>
 
-      <p>
-        Thor concluiu sua estadia sem intercorrências.
-      </p>
+<p id="visualizar-anotacoes">
+  Nenhuma anotação registrada para esta reserva.
+</p>
 
       <!-- Recibo -->
       <h3>Recibo ou nota da estadia</h3>
 
       <p>
-        <strong>Documento:</strong> Recibo R002-2026.pdf
-      </p>
+  <strong>Documento:</strong>
+  <span id="visualizar-recibo">Nenhum recibo vinculado.</span>
+</p>
 
       <p>
         <small>
@@ -108,9 +109,9 @@
 
       <!-- Ações -->
       <p>
-        <a href="reserva-editar.html?id=R002">
-          Editar como gerente
-        </a>
+        <a id="editar-reserva-finalizada" href="reserva-editar.html?id=R002">
+  Editar como gerente
+</a>
         |
         <a href="reservas.html">
           Voltar para reservas
@@ -128,5 +129,7 @@
     <p>Hotel Pet — Trabalho Final.</p>
   </footer>
 
+<script src="../js/dados.js"></script>
+<script src="../js/reserva-visualizar.js"></script>
 </body>
 </html>
