@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cadastro de usuário do Hotel Pet.">
-    <title>Hotel Pet | Novo usuário</title>
+    <title>Hotel Pet | Editar usuário</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -59,10 +59,11 @@
                 <section class="painel formulario-painel"
                          aria-labelledby="titulo-formulario">
 
-                    <h1 id="titulo-formulario">Novo usuário</h1>
+                    <h1 id="titulo-formulario">Editar usuário</h1>
 
-                    <form class="formulario-usuario"
-                          action="usuarios.html" method="get">
+                    <form id="form-editar-usuario"
+      class="formulario-usuario"
+      action="usuarios.html" method="get">
 
                         <div class="campo">
                             <label for="email-usuario">E-mail *</label>
@@ -128,5 +129,8 @@
             </main>
         </div>
     </div>
+
+<script src="../js/dados.js"></script>
+<script src="../js/usuario-editar.js"></script>
 </body>
 </html>

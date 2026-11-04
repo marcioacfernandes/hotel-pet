@@ -142,7 +142,11 @@ function obterUsuarios() {
     }
   }
 
-  return [...usuariosIniciais];
+    return [...usuariosIniciais];
+}
+
+function salvarUsuarios(lista) {
+  localStorage.setItem("hotelPetUsuarios", JSON.stringify(lista));
 }
 
 function salvarReservas(lista) {

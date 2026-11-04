@@ -27,6 +27,22 @@ function carregarUsuarios(lista = obterUsuarios()) {
       linha.appendChild(celula);
     });
 
+   const celulaAcoes = document.createElement("td");
+
+    const linkEditar = document.createElement("a");
+    linkEditar.href = "usuario-editar.html?id=" + encodeURIComponent(usuario.id);
+    linkEditar.textContent = "Editar";
+
+   celulaAcoes.appendChild(linkEditar);
+celulaAcoes.appendChild(document.createTextNode(" | "));
+
+const linkVisualizar = document.createElement("a");
+linkVisualizar.href = "usuario-visualizar.html?id=" + encodeURIComponent(usuario.id);
+linkVisualizar.textContent = "Visualizar";
+
+celulaAcoes.appendChild(linkVisualizar);
+linha.appendChild(celulaAcoes);
+
     corpoTabela.appendChild(linha);
   });
 }
