@@ -1,30 +1,95 @@
-# Hotel Pet — primeira entrega (HTML)
+Hotel Pet — Trabalho Final
 
-Este projeto representa exclusivamente a **visão do gerente** do sistema Hotel Pet. As descrições das visões de cliente e funcionário foram usadas para definir as funcionalidades que o gerente herda, pois o gerente pode realizar todas essas ações e possui permissões extras.
+Descrição do projeto
 
-## Tecnologias desta entrega
+O Hotel Pet é um sistema desenvolvido para auxiliar no gerenciamento de um hotel para animais de estimação.
 
-O projeto utiliza apenas HTML5. Não há CSS, JavaScript, bibliotecas, frameworks, banco de dados, autenticação real ou armazenamento de arquivos.
+O projeto representa a visão do gerente, que possui acesso às funcionalidades de clientes e funcionários, além de permissões adicionais para administrar reservas, pets e usuários.
 
-## Como executar
+Tecnologias utilizadas
 
-Abra `index.html` no navegador. Na tela de acesso, preencha os campos e selecione **Entrar** para abrir a tela de reservas do gerente.
+HTML5: estrutura das páginas.
 
-## Principais telas
+CSS3: estilização e organização visual.
 
-| Módulo | Arquivos HTML | Funcionalidades representadas |
-|---|---|---|
-| Acesso | `index.html` | Login estático do gerente |
-| Reservas | `reservas.html`, `reserva-nova.html`, `reserva-editar.html`, `reserva-visualizar.html`, `reserva-finalizada.html` | Pesquisa, cadastro, visualização, registros, recibo e edição de reserva finalizada pelo gerente |
-| Pets | `pets.html`, `pet-novo.html`, `pet-editar.html`, `pet-visualizar.html` | Pesquisa, cadastro, proprietário, edição, histórico e exclusão visual |
-| Usuários | `usuarios.html`, `usuario-novo.html`, `usuario-editar.html`, `usuario-visualizar.html` | Pesquisa, cadastro, mudança de função, status, edição e visualização |
-| Configurações | `configuracoes.html` | Valor das diárias e número de vagas |
-| Perfil | `perfil.html` | Alteração estática de informações do gerente |
+JavaScript: implementação das funcionalidades e interações.
 
-## Limitações conhecidas
+LocalStorage: armazenamento dos dados no navegador.
 
-Os filtros, a autenticação, a alteração de status, o salvamento, a exclusão, o upload de fotos, os cálculos e o recibo são apenas representações estruturais. Eles serão funcionais somente com programação adicional e um backend, que não fazem parte da primeira entrega.
+Como executar
 
-## Etapa de CSS
+Baixe ou clone o repositório do projeto.
 
-Na segunda entrega, será criado um arquivo `css/style.css` para aplicar a aparência do Figma: menu lateral, barra superior, cores, botões, tabela, status, tipografia, espaçamentos, responsividade e imagens.
+Abra a pasta hotel-pet no VS Code.
+
+Abra o arquivo index.html no navegador.
+
+Acesse as funcionalidades pelo menu do sistema.
+
+Funcionalidades implementadas
+
+Reservas
+
+Listagem e pesquisa de reservas.
+
+Cadastro de novas reservas.
+
+Edição das informações das reservas.
+
+Visualização dos dados das reservas.
+
+Visualização de reservas finalizadas.
+
+Permissão do gerente para editar reservas finalizadas.
+
+Pets
+
+Listagem e pesquisa de pets.
+
+Cadastro de novos pets.
+
+Edição dos dados cadastrados.
+
+Visualização das informações dos pets.
+
+Funcionalidades de gerenciamento e exclusão.
+
+Usuários
+
+Listagem e pesquisa de usuários.
+
+Cadastro de novos usuários.
+
+Edição dos dados cadastrados.
+
+Visualização das informações dos usuários.
+
+Exclusão de usuários com confirmação.
+
+Etapas do desenvolvimento
+
+Primeira entrega — HTML
+
+Criação da estrutura das páginas e organização das funcionalidades da visão do gerente.
+
+Segunda entrega — HTML, CSS e JavaScript
+
+Aplicação da estilização visual e desenvolvimento das primeiras interações do sistema.
+
+Terceira entrega — CRUD
+
+Implementação de operações de cadastro, consulta, edição e exclusão, utilizando JavaScript e armazenamento local no navegador.
+
+Limitações do projeto
+
+O sistema utiliza o LocalStorage para armazenar dados no próprio navegador, sem integração com um banco de dados externo.
+
+A autenticação real, o armazenamento de arquivos em servidor e a integração com um backend não foram implementados.
+
+Algumas funcionalidades, como recibos e upload de imagens, permanecem demonstrativas.
+
+Repositório
+
+https://github.com/marcioacfernandes/hotel-pet
+
+Branch da terceira entrega: semana-3-crud
