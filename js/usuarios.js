@@ -41,6 +41,27 @@ linkVisualizar.href = "usuario-visualizar.html?id=" + encodeURIComponent(usuario
 linkVisualizar.textContent = "Visualizar";
 
 celulaAcoes.appendChild(linkVisualizar);
+celulaAcoes.appendChild(document.createTextNode(" | "));
+
+const botaoExcluir = document.createElement("button");
+botaoExcluir.type = "button";
+botaoExcluir.textContent = "Excluir";
+
+botaoExcluir.addEventListener("click", function() {
+  const confirmar = confirm("Deseja realmente excluir o usuário " + usuario.nome + "?");
+
+  if (confirmar) {
+    const usuarios = obterUsuarios();
+    const listaAtualizada = usuarios.filter(function(item) {
+      return item.id !== usuario.id;
+    });
+
+    salvarUsuarios(listaAtualizada);
+    carregarUsuarios();
+  }
+});
+
+celulaAcoes.appendChild(botaoExcluir);
 linha.appendChild(celulaAcoes);
 
     corpoTabela.appendChild(linha);
